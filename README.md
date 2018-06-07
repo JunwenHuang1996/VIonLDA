@@ -1,5 +1,6 @@
 # VIonLDA
 
+Created by: Yunran Chen, Junwen Huang
 
 This project is application of Variational Inference on Latent Dirichlet Allocation. We mainly reproduce paper by Blei et al. 2003. There are three main parts: 1. Functions packaged inside package VIonLDA, which includes all the versions of function mentioned in the report. Including data simulation and Variational EM algorithm on LDA and smoothing LDA. 2. Tests. All the simulations we mentioned in the report. 3. Examples. We give application on real data analysis. 4.Parallel. For the parallel version not always work. We exclude it from our package.
 
