@@ -30,11 +30,11 @@ pip install -I --index-url https://test.pypi.org/simple/ VIonLDA
 This package includes:
 
 ## Main Functions 
-\
+
 1. simulation_data()
 
 Data simulation according to LDA model, the output would be a list of one-hot-coding matrix.
-\
+
 2. M_step_Vectorization()
 
 Vectorizaiton Variational EM algorithm on LDA. Inside would use function E_step_Vectorization().
