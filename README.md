@@ -39,11 +39,11 @@ Data simulation according to LDA model, the output would be a list of one-hot-co
 
 Vectorizaiton Variational EM algorithm on LDA. Inside would use function E_step_Vectorization().
 
-3.M_step_Smoothing()
+3. M_step_Smoothing()
 
 Vectorization version of Variational EM algorithm on smoothing LDA. Inside would use function E_step_Smoothing(). 
 
-4.mmse()
+4. mmse()
 
 Evaluation function 
 
