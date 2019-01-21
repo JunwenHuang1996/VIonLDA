@@ -14,15 +14,13 @@ Here since the parallel version does not always work, we exclude it from our pac
 
 # Install the package
 
-Please make sure the package version is 2.7. 
+* Please make sure the package version is 2.7. 
 
 %%bash
 
 pip install --index-url https://test.pypi.org/simple/VIonLDA
 
-To install the latest version:
-
-First uninstall:
+To install the latest version, first uninstall:
 
 pip uninstall --index-url https://test.pypi.org/simple/VIonLDA
 
