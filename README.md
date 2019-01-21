@@ -1,4 +1,4 @@
-# VIonLDA
+# Variational Inference on Latent Dirichlet Allocation
 
 Created by: Yunran Chen, Junwen Huang
 
@@ -67,7 +67,7 @@ Structured version of Variational EM algorithm on LDA. Requires the function E_s
 
 To avoid overflow when applied in real dataset, set the float128 as the data type. A slightly change on the vectorized version. Requires the function E_step_Realdata()
 
-# Tests
+# tests
 
 Inside is a .ipynb file showing how to apply these functions and reproduce the result on simulation data in the report. 
 
@@ -75,11 +75,11 @@ Inside is a .ipynb file showing how to apply these functions and reproduce the r
 
 Inside is a .ipynb file showing how to apply these functions to real datasets and reproduce the result in the report.
 
-# Parallel
+# parallel
 
 Inside is a .ipynb file showing the parallel version of Variational EM on LDA. Make sure you $pip install ray before run it. Sometimes ray cannot run in the Virtual Machine (VM). If this happens please restart the VM. Since Parallel version does not always work (depends on the condition of the computer), we have decided to exclude this part from the package.
 
-# Ideal Data Structure But Poor Performance
+# lda_ideal_data_structure_worse_behavior.ipynb
 
 As we mentioned in the discussion, we designed a version of ideal data structure. We implemented matrix multiplicaiton, vectorization and broadcast in this version. The speed is much faster: We can see with the same initialization (10 times iteration), this version takes only half of the time needed by the vectorization version in the report. However, the mse is worse than the vectorization version.
 
