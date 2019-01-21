@@ -49,15 +49,15 @@ Evaluation function
 
 ## Other functions 
 
-1.M_step_Plain()
+1. M_step_Plain()
 
 Plain version Variational EM algorithm on LDA. Inside would use function E_step_Plain().
 
-2.M_step_Structure()
+2. M_step_Structure()
 
 Structure1 version Variational EM algorithm on LDA. Inside would use function E_step_Structure(). This algorithm is based on Vectorization version. But using vector as input for E_step.
 
-3.M_step_Realdata()
+3. M_step_Realdata()
 
 To avoid overflow when applied in real dataset. We set the float128 for the data type. A slightly change on Vectorization version. Inside would use function E_step_Realdata()
 
