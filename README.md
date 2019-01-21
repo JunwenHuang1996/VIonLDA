@@ -31,11 +31,11 @@ Then install the latest version:
 pip install -I --index-url https://test.pypi.org/simple/VIonLDA
 
 
-# Functions inside package VIonLDA
+# VIonLDA
 
 This package includes:
 
-## Main Functions 
+### 1 Main Functions 
 
 * simulation_data()
 
@@ -53,7 +53,7 @@ Vectorized version of Variational EM algorithm on smoothing LDA. Requires the fu
 
 Evaluation function.
 
-## Other functions 
+### 2 Other functions 
 
 * M_step_Plain()
 
@@ -69,26 +69,24 @@ To avoid overflow when applied in real dataset, set the float128 as the data typ
 
 # Tests
 
-Inside is .ipynb showing how to use this functions and reproduce the result on simulation data in the report. 
+Inside is a .ipynb file showing how to apply these functions and reproduce the result on simulation data in the report. 
 
 # Examples
 
-Inside is .ipynb showing how to use these functions on real datasets and reproduce the result in the report.
+Inside is a .ipynb file showing how to apply these functions to real datasets and reproduce the result in the report.
 
 # Parallel
 
-Inside is .ipynb showing the parallel version of Variational EM on LDA. Make sure you $pip install ray before run it. Sometimes ray cannot run in VM. Please restart the VM. Because Parallel version would not always work. Depends on the condition of your computer. We decide to exclude this part from the package.
+Inside is a .ipynb file showing the parallel version of Variational EM on LDA. Make sure you $pip install ray before run it. Sometimes ray cannot run in the Virtual Machine (VM). If this happens please restart the VM. Since Parallel version does not always work (depends on the condition of the computer), we have decided to exclude this part from the package.
+
+# Ideal Data Structure But Poor Performance
+
+As we mentioned in the discussion, we designed a version of ideal data structure. We implemented matrix multiplicaiton, vectorization and broadcast in this version. The speed is much faster: We can see with the same initialization (10 times iteration), this version takes only half of the time needed by the vectorization version in the report. However, the mse is worse than the vectorization version.
 
 # Notice
 
-- All the defaults of the function are set as the report suggest. 
+- All the defaults of the function are set as the report suggests. 
 
-- To reproduce our result, do include random seed 123.
+- To reproduce the result in the report, use random seed 123.
 
-- We expand more on the discussion in our report to firgure out a better data structure. See lda_ideal_data_structure_worse_behavior.ipynb. For the poor behavior, we do not include this part in our package and report. But it is worth discussing.
-
-# Ideal Data Structure But Poor Behavior
-
-As we mentioned in the discussion, we design a version for ideal data structure. We implemented matrix multiplicaiton, vectorization and broadcast in this version. We can see the speed is super fast. However, the core idea that VI work is the Variational parameter $\phi$, $\gamma$ converge. (make the KL distance as small as possible to approximate the probability density) So if we break this rule, the algorithm cannot converge and even intractable. We can see with the same initialization, 10 times iteration, the time for this algorithm is only half of the vectorization version we adopt in the report. However, the mse is a factor of 0.1 to 0.01 in scale worse than the vectorization version. 
-
- 
+- See lda_ideal_data_structure_worse_behavior.ipynb for further discussion about an theoretically better data structure. For the poor performance in reality, we do not include this part in our package and report. But it is worth discussing. 
