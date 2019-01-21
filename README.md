@@ -4,11 +4,11 @@ Created by: Yunran Chen, Junwen Huang
 
 This project is the application of Variational Inference on Latent Dirichlet Allocation. We mainly reproduced paper by Blei et al. 2003. There are three main parts: 
 
-1. Functions packaged inside package VIonLDA, which includes all the versions of functions mentioned in the report. These functions cover data simulation, Variational EM algorithm on LDA and smoothing LDA. 
+* Functions packaged inside package VIonLDA, which includes all the versions of functions mentioned in the report. These functions cover data simulation, Variational EM algorithm on LDA and smoothing LDA. 
 
-2. All the simulations mentioned in the report. 
+* All the simulations mentioned in the report. 
 
-3. A real-world application.
+* A real-world application.
 
 Here since the parallel version does not always work, we exclude it from our package.
 
@@ -37,35 +37,35 @@ This package includes:
 
 ## Main Functions 
 
-1. simulation_data()
+* simulation_data()
 
-Data simulation according to LDA model, the output would be a list of one-hot-coding matrix.
+Data simulation based on LDA model, the output is a list of one-hot-coding matrices.
 
-2. M_step_Vectorization()
+* M_step_Vectorization()
 
-Vectorizaiton Variational EM algorithm on LDA. Inside would use function E_step_Vectorization().
+Vectorized version of Variational EM algorithm on LDA. Requires the function E_step_Vectorization().
 
-3. M_step_Smoothing()
+* M_step_Smoothing()
 
-Vectorization version of Variational EM algorithm on smoothing LDA. Inside would use function E_step_Smoothing(). 
+Vectorized version of Variational EM algorithm on smoothing LDA. Requires the function E_step_Smoothing(). 
 
-4. mmse()
+* mmse()
 
-Evaluation function 
+Evaluation function.
 
 ## Other functions 
 
-1. M_step_Plain()
+* M_step_Plain()
 
-Plain version Variational EM algorithm on LDA. Inside would use function E_step_Plain().
+Naive version Variational EM algorithm on LDA. Requires the function E_step_Plain().
 
-2. M_step_Structure()
+* M_step_Structure()
 
-Structure1 version Variational EM algorithm on LDA. Inside would use function E_step_Structure(). This algorithm is based on Vectorization version. But using vector as input for E_step.
+Structured version of Variational EM algorithm on LDA. Requires the function E_step_Structure(). This algorithm is based on the vectorized version, though in E step it takes vector as input.
 
-3. M_step_Realdata()
+* M_step_Realdata()
 
-To avoid overflow when applied in real dataset. We set the float128 for the data type. A slightly change on Vectorization version. Inside would use function E_step_Realdata()
+To avoid overflow when applied in real dataset, set the float128 as the data type. A slightly change on the vectorized version. Requires the function E_step_Realdata()
 
 # Tests
 
