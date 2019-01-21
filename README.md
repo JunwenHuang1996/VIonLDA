@@ -18,19 +18,19 @@ Please make sure the package version is 2.7.
 
 %%bash
 
-pip install --index-url https://test.pypi.org/simple/ VIonLDA
+pip install --index-url https://test.pypi.org/simple/VIonLDA
 
 To install the latest version:
 
 First uninstall:
 
-pip uninstall --index-url https://test.pypi.org/simple/ VIonLDA
+pip uninstall --index-url https://test.pypi.org/simple/VIonLDA
 
 Then install the latest version:
 
 %%bash
 
-pip install -I --index-url https://test.pypi.org/simple/ VIonLDA
+pip install -I --index-url https://test.pypi.org/simple/VIonLDA
 
 
 # Functions inside package VIonLDA
